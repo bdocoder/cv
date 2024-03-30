@@ -1,0 +1,19 @@
+{
+  "name": "cv",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:cv": "node scripts/build-cv.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.6.1",
+    "sass": "^1.71.1",
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "bulma": "^1.0.0"
+  }
+}
