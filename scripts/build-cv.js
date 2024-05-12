@@ -1,13 +1,9 @@
 import { fileURLToPath } from "url";
 import puppeteer from "puppeteer";
-import { build, preview } from "vite";
+import { preview } from "vite";
 
 async function run() {
   const __dirname = fileURLToPath(new URL("..", import.meta.url));
-  await build({
-    configFile: false,
-    root: __dirname,
-  });
   const PORT = 4173;
   const server = await preview({
     configFile: false,
