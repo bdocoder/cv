@@ -1,5 +1,5 @@
 import { fileURLToPath } from "url";
-import puppeteer from "puppeteer";
+import { chromium } from "playwright";
 import { preview } from "vite";
 
 async function run() {
@@ -13,10 +13,10 @@ async function run() {
     },
   });
 
-  const browser = await puppeteer.launch({ headless: "new" });
+  const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}`);
-  await page.emulateMediaType("screen");
+  await page.emulateMedia({media: "screen"});
   await page.pdf({
     path: "public/cv.pdf",
     printBackground: true,

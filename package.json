@@ -7,10 +7,11 @@
     "build": "vite build",
     "postbuild": "npm run build:cv",
     "preview": "vite preview",
-    "build:cv": "node scripts/build-cv.js"
+    "build:cv": "node scripts/build-cv.js",
+    "postinstall": "npx playwright install chromium"
   },
   "devDependencies": {
-    "puppeteer": "^22.6.1",
+    "playwright": "^1.46.0",
     "sass": "^1.71.1",
     "vite": "^5.1.4"
   },
