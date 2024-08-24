@@ -1,95 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./style.scss" />
+    <title>CV</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="./style.scss" />
-  <title>CV</title>
-</head>
-
-<body class="container is-max-desktop">
-  <div class="container is-fluid">
-    <header>
-      <div class="level has-text-centered-mobile">
-        <div class="level-left">
-          <div>
-            <h1 class="title is-2">Abdullah Ahmad</h1>
-            <p class="subtitle is-4">Web Developer</p>
+  <body class="container is-max-desktop">
+    <div class="container is-fluid">
+      <header>
+        <div class="level has-text-centered-mobile">
+          <div class="level-left">
+            <div>
+              <h1 class="title is-2">Abdullah Ahmad</h1>
+              <p class="subtitle is-4">Web Developer</p>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="has-text-right-tablet">
+              <p class="small">Sinnures - Al-Fayyum - Egypt</p>
+              <p class="small">+201001004759 - bdocoder@gmail.com</p>
+            </div>
           </div>
         </div>
-        <div class="level-right">
-          <div class="has-text-right-tablet">
-            <p class="small">Sinnures - Al-Fayyum - Egypt</p>
-            <p class="small">+201001004759 - bdocoder@gmail.com</p>
+      </header>
+      <main>
+        <section>
+          <h3>Summary</h3>
+          <hr />
+          A fullstack developer with a good skill level in JavaScript and a
+          variety of its frameworks and libraries. Always enthusiastic about
+          learning new concepts and technologies. I also care about performance,
+          cross-browser compatibility, and writing readable & maintainable code.
+        </section>
+        <section>
+          <h3>Education</h3>
+          <hr />
+          <p class="has-text-weight-semibold mb-1">
+            Bachelor of Mathematics & Computer Science - College of Science -
+            Fayyum University
+          </p>
+          <p class="tag is-primary">2019 - 2023</p>
+        </section>
+        <section>
+          <h3>Side Projects</h3>
+          <hr />
+          <ul>
+            <li>
+              <a href="https://code-critic.vercel.app">Code Critic</a>
+              (
+              <a href="https://github.com/bdocoder/code-critic">
+                Source Code
+              </a>
+              ) - A simple bug tracker where a user can create, comment on, or
+              resolve issues within a project they're a member of.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Skills</h3>
+          <hr />
+          <div class="tags">
+            <span class="tag is-rounded is-medium">
+              JavaScript & TypeScript
+            </span>
+            <span class="tag is-rounded is-medium">React / Next</span>
+            <span class="tag is-rounded is-medium">SQL</span>
+            <span class="tag is-rounded is-medium">MongoDB</span>
+            <span class="tag is-rounded is-medium">Java</span>
+            <span class="tag is-rounded is-medium">Go (Basics)</span>
+            <span class="tag is-rounded is-medium">Linux</span>
+            <span class="tag is-rounded is-medium">Webflow</span>
           </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section>
-        <h3>Summary</h3>
-        <hr />
-        A fullstack developer with a good skill level in JavaScript and
-        a variety of its frameworks and libraries. Always enthusiastic about
-        learning new concepts and technologies. I also care about performance,
-        cross-browser compatibility, and writing readable & maintainable code.
-      </section>
-      <section>
-        <h3>Education</h3>
-        <hr />
-        <p class="has-text-weight-semibold mb-1">
-          Bachelor of Mathematics & Computer Science - College of Science -
-          Fayyum University
-        </p>
-        <p class="tag is-primary">2019 - 2023</p>
-      </section>
-      <section>
-        <h3>Side Projects</h3>
-        <hr />
-        <ul>
-          <li>
-            <a href="https://code-critic.vercel.app">Code Critic</a>
-            (
-            <a href="https://github.com/bdocoder/code-critic">
-              Source Code
+        </section>
+        <section>
+          <h3>Profiles</h3>
+          <hr />
+          <div class="buttons">
+            <a
+              class="button"
+              target="_blank"
+              href="https://github.com/bdocoder"
+            >
+              GitHub
             </a>
-            ) - A simple bug tracker where a user can create, comment on,
-            or resolve issues within a project they're a member of.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Skills</h3>
-        <hr />
-        <div class="tags">
-          <span class="tag is-rounded is-medium">
-            JavaScript & TypeScript
-          </span>
-          <span class="tag is-rounded is-medium">React / Next</span>
-          <span class="tag is-rounded is-medium">SQL</span>
-          <span class="tag is-rounded is-medium">MongoDB</span>
-          <span class="tag is-rounded is-medium">Java</span>
-          <span class="tag is-rounded is-medium">Go (Basics)</span>
-          <span class="tag is-rounded is-medium">Linux</span>
-          <span class="tag is-rounded is-medium">Webflow</span>
-        </div>
-      </section>
-      <section>
-        <h3>Profiles</h3>
-        <hr />
-        <div class="buttons">
-          <a class="button" target="_blank" href="https://github.com/bdocoder">
-            GitHub
-          </a>
-          <a class="button" target="_blank" href="https://leetcode.com/bdocoder">
-            LeetCode
-          </a>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
-
+            <a
+              class="button"
+              target="_blank"
+              href="https://leetcode.com/bdocoder"
+            >
+              LeetCode
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
