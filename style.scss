@@ -1,10 +1,14 @@
-@use "./node_modules/bulma/sass" with (
-  $hr-margin: 0.25rem 0 1.25rem
-);
+$column-gap: 1.25rem;
+
+@import "./node_modules/bulma-scss/bulma.scss";
 
 header,
 section {
   margin: 2rem 0;
+}
+
+section:first-child {
+  margin-top: 0;
 }
 
 header {
@@ -13,12 +17,13 @@ header {
 
 section {
   h3 {
-    color: var(--bulma-primary);
+    color: $primary;
     text-transform: uppercase;
-    font-size: var(--bulma-size-5);
+    font-size: $size-5;
   }
 
   hr {
-    background-color: var(--bulma-primary);
+    background-color: $primary;
+    margin: 0.25rem 0 1.25rem;
   }
 }

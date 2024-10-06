@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      bulma:
-        specifier: ^1.0.0
-        version: 1.0.0
+      bulma-scss:
+        specifier: ~0.9.4
+        version: 0.9.4
     devDependencies:
       playwright:
         specifier: ^1.46.0
@@ -245,8 +245,8 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  bulma@1.0.0:
-    resolution: {integrity: sha512-7n49v/gdHXaHcU9fVobqGXO2OguiCoMh6CLbeX7jq00XrZ5vOSE4LNS0S/0Q6rlBbckY6kk6W7LwqxS0nu4bug==}
+  bulma-scss@0.9.4:
+    resolution: {integrity: sha512-iMrNFlR6yEMutYEAi1VseAmsadmmWnb8A2DghUR7jZKJLaw6AibmHOkqwlEPjsXkqJ7Pp1z/bEJ6gFMG0WNdJw==}
 
   chokidar@4.0.1:
     resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
@@ -462,9 +462,7 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
-  bulma@1.0.0:
-    dependencies:
-      sass: 1.79.4
+  bulma-scss@0.9.4: {}
 
   chokidar@4.0.1:
     dependencies:
