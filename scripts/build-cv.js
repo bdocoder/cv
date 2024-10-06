@@ -20,7 +20,7 @@ async function run() {
   await page.pdf({
     path: "public/cv.pdf",
     printBackground: true,
-    width: 768,
+    width: 1024,
   });
 
   await browser.close();
