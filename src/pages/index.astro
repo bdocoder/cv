@@ -1,0 +1,111 @@
+---
+import Section from "../components/section.astro";
+import Tag from "../components/tag.astro";
+import "../styles.scss";
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="u-text-center">
+        <h1>Abdullah Ahmad</h1>
+        <h5 class="font-normal">Web Developer</h5>
+      </div>
+      <div class="row u-items-flex-start mt-4">
+        <div class="col-3 bg-gray-100 px-2 pb-2">
+          <h3 class="font-normal u-text-center">Public Info</h3>
+          <p>
+            <b>Address</b>: Sinnures - Fayyum - Egypt
+          </p>
+          <p>
+            <b>Phone</b>: +201001004759
+          </p>
+          <p>
+            <b>Email</b>: bdocoder@gmail.com
+          </p>
+          <hr />
+          <h3 class="font-normal u-text-center">Profiles</h3>
+          <a href="https://github.com/bdocoder" target="_blank">GitHub</a>
+          -
+          <a href="https://leetcode.com/bdocoder" target="_blank">Leetcode</a>
+        </div>
+        <div class="col-8 offset-1">
+          <Section title="Summary">
+            <p>
+              A fullstack developer with a decent skill level in JavaScript and
+              a variety of its frameworks and libraries. Always enthusiastic
+              about learning new concepts and technologies. I also care about
+              performance, cross-browser compatibility, and writing readable &
+              maintainable code.
+            </p>
+          </Section>
+
+          <Section title="Education">
+            <p class="text-lg font-semibold">
+              Bachelor of Mathematics & Computer Science - College of Science -
+              Fayyum University
+            </p>
+            <Tag primary>2019 - 2023</Tag>
+          </Section>
+
+          <Section title="Courses">
+            <ul>
+              <li>Webflow 101</li>
+              <li>Webflow CMS & dynamic content</li>
+              <li>Webflow SEO fundamentals</li>
+              <li>MongoDB NodeJS Developer Path</li>
+              <li>Back-End Web Development with .NET on Linkedin</li>
+            </ul>
+          </Section>
+
+          <Section title="Trainings">
+            <p class="text-lg font-semibold">
+              Integration Engineering at TechHub
+            </p>
+            <p>
+              The training included general background on servers & cloud
+              computing, basic backend development with NodeJS, and fundamentals
+              of IBM MQ and AppConnect Enterprise Toolkit.
+            </p>
+            <Tag primary>Late 2024</Tag>
+          </Section>
+
+          <Section title="Side Projects">
+            <p>
+              <a href="https://code-critic.vercel.app" target="_blank"
+                >Code Critic</a
+              > (<a
+                href="https://github.com/bdocoder/code-critic"
+                target="_blank">source code</a
+              >) - A simple bug tracker where a user can create or resolve
+              tickets within a project they're a member of.
+            </p>
+          </Section>
+
+          <Section title="Skills">
+            <div class="tag-container">
+              <Tag>TypeScript</Tag>
+              <Tag>React</Tag>
+              <Tag>Vue</Tag>
+              <Tag>NextJS</Tag>
+              <Tag>Astro</Tag>
+              <Tag>SQL</Tag>
+              <Tag>MongoDB</Tag>
+              <Tag>Go (Basics)</Tag>
+              <Tag>Java</Tag>
+              <Tag>Python</Tag>
+              <Tag>Linux</Tag>
+              <Tag>Webflow</Tag>
+            </div>
+          </Section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

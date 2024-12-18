@@ -3,18 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "build:cv": "node scripts/build-cv.js",
     "postinstall": "playwright install chromium"
   },
   "devDependencies": {
+    "astro": "^5.0.9",
     "playwright": "^1.46.0",
-    "sass": "^1.71.1",
-    "vite": "^5.1.4"
+    "sass": "^1.83.0"
   },
   "dependencies": {
-    "bulma-scss": "~0.9.4"
+    "cirrus-ui": "0.7.2-patch.1"
   }
 }

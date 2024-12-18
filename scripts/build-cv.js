@@ -1,30 +1,31 @@
-import { fileURLToPath } from "url";
 import { chromium } from "playwright";
-import { preview } from "vite";
+import { preview } from "astro";
 
 async function run() {
-  const __dirname = fileURLToPath(new URL("..", import.meta.url));
-  const PORT = 4173;
+  const PORT = 4321;
   const server = await preview({
-    configFile: false,
-    root: __dirname,
+    root: ".",
     server: {
       port: PORT,
     },
+    logLevel: "error",
   });
 
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}`);
-  await page.emulateMedia({media: "screen"});
+  await page.emulateMedia({ media: "screen" });
   await page.pdf({
     path: "public/cv.pdf",
     printBackground: true,
-    width: 1024,
+    width: 1080,
+    margin: {
+      top: "24",
+    },
   });
 
   await browser.close();
-  await server.close();
+  await server.stop();
 }
 
 run();
