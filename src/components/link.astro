@@ -1,0 +1,26 @@
+---
+import { Button } from "./ui/button";
+
+interface Props {
+  icon: any;
+  href: string;
+  ariaLabel: string;
+}
+
+const props = Astro.props;
+---
+
+<a href={props.href} target="_blank" aria-label={props.ariaLabel}>
+  <Button
+    className="print:border-transparent cursor-pointer"
+    variant="outline"
+    size="icon"
+  >
+    <props.icon />
+    <span class="not-print:hidden">
+      <slot>
+        {props.href}
+      </slot>
+    </span>
+  </Button>
+</a>

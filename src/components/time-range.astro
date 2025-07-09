@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  from: string;
+  to?: string;
+}
+
+const props = Astro.props;
+---
+
+<div class="grid gap-2">
+  <div class="flex">
+    <h2 class="text-lg font-medium">{props.title}</h2>
+    <div class="m-auto"></div>
+    <div class="text-lg font-mono">
+      <span>{props.from}</span>
+      —
+      <span>{props.to ?? "Present"}</span>
+    </div>
+  </div>
+
+  <slot />
+</div>

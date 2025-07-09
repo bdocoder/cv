@@ -1,13 +1,27 @@
 ---
+import { cn } from "@/lib/utils";
+
 interface Props {
-  title: string;
+  title?: string;
+  withSpacing?: boolean;
 }
 
-const { title } = Astro.props;
+const props = Astro.props;
 ---
 
-<section class="section mb-12">
-  <h3>{title}</h3>
-  <hr class="divider" />
+<section
+  class={cn(
+    "mb-12 flex flex-col first:mt-8 break-inside-avoid",
+    props.withSpacing !== false && "gap-4"
+  )}
+>
+  {
+    props.title && (
+      <>
+        <h3 class="text-xl font-bold">{props.title}</h3>
+        <hr class="-mt-2 border border-primary/35" />
+      </>
+    )
+  }
   <slot />
 </section>

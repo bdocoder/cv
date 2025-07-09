@@ -1,7 +1,16 @@
 ---
-import Section from "../components/section.astro";
-import Tag from "../components/tag.astro";
-import "../styles.scss";
+import "../styles/global.css";
+import Section from "@/components/section.astro";
+import Skill from "@/components/skill.astro";
+import Link from "@/components/link.astro";
+import TimeRange from "@/components/time-range.astro";
+import {
+  GithubIcon,
+  GlobeIcon,
+  LinkedinIcon,
+  MailIcon,
+  PhoneIcon,
+} from "lucide-react";
 ---
 
 <!doctype html>
@@ -9,103 +18,143 @@ import "../styles.scss";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV</title>
+    <title>Abdullah Ahmad — CV</title>
   </head>
-  <body>
-    <div class="content">
-      <div class="u-text-center">
-        <h1>Abdullah Ahmad</h1>
-        <h5 class="font-normal">Web Developer</h5>
+  <body class="container max-w-2xl">
+    <Section withSpacing={false}>
+      <h1 class="text-2xl font-bold mb-3">Abdullah Ahmad</h1>
+      <p class="mb-1">Web Developer and Software Tester</p>
+      <p class="flex items-center gap-2 mb-4">
+        <GlobeIcon className="size-4" />
+        <span>Fayyum - Egypt</span>
+      </p>
+      <div class="flex gap-2 print:flex-col">
+        <Link
+          icon={MailIcon}
+          href="mailto:bdocoder@gmail.com"
+          ariaLabel="email"
+        >
+          bdocoder@gmail.com
+        </Link>
+        <Link icon={PhoneIcon} href="tel:+201001004759" ariaLabel="phone">
+          +20 100 100 4759
+        </Link>
+        <!-- TODO: use non-deprecated icons -->
+        <Link
+          icon={GithubIcon}
+          href="https://github.com/bdocoder"
+          ariaLabel="github"
+        />
+        <Link
+          icon={LinkedinIcon}
+          href="https://linkedin.com/in/bdocoder"
+          ariaLabel="linkedin"
+        />
       </div>
-      <div class="row u-items-flex-start mt-4">
-        <div class="col-3 bg-gray-100 px-2 pb-2">
-          <h3 class="font-normal u-text-center">Public Info</h3>
-          <p>
-            <b>Address</b>: Sinnures - Fayyum - Egypt
-          </p>
-          <p>
-            <b>Phone</b>: +201001004759
-          </p>
-          <p>
-            <b>Email</b>: bdocoder@gmail.com
-          </p>
-          <hr />
-          <h3 class="font-normal u-text-center">Profiles</h3>
-          <a href="https://github.com/bdocoder" target="_blank">GitHub</a>
-          -
-          <a href="https://leetcode.com/bdocoder" target="_blank">Leetcode</a>
-        </div>
-        <div class="col-8 offset-1">
-          <Section title="Summary">
-            <p>
-              A fullstack developer with a decent skill level in JavaScript and
-              a variety of its frameworks and libraries. Always enthusiastic
-              about learning new concepts and technologies. I also care about
-              performance, cross-browser compatibility, and writing readable &
-              maintainable code.
-            </p>
-          </Section>
+    </Section>
+    <Section title="Summary">
+      <p>
+        A fullstack developer proficient in JavaScript and its ecosystems,
+        passionate about writing performant, maintainable code.
+      </p>
+    </Section>
 
-          <Section title="Education">
-            <p class="text-lg font-semibold">
-              Bachelor of Mathematics & Computer Science - College of Science -
-              Fayyum University
-            </p>
-            <Tag primary>2019 - 2023</Tag>
-          </Section>
+    <Section title="Trainings and Internships">
+      <TimeRange
+        title="Software Testing at ITI"
+        from="March 2025"
+        to="July 2025"
+      >
+        <p>The internship included training and hands-on practice in:</p>
+        <ul>
+          <li>Linux</li>
+          <li>Communication and Presentation Skills</li>
+          <li>SQL Server</li>
+          <li>Computer Networks and Operating Systems</li>
+          <li>C, C++, and Java</li>
+          <li>HTML and CSS</li>
+          <li>Web and API Testing</li>
+          <li>Test Case Design and Bug Report Writing</li>
+        </ul>
+      </TimeRange>
 
-          <Section title="Courses">
-            <ul>
-              <li>Webflow 101</li>
-              <li>Webflow CMS & dynamic content</li>
-              <li>Webflow SEO fundamentals</li>
-              <li>MongoDB NodeJS Developer Path</li>
-              <li>Back-End Web Development with .NET on Linkedin</li>
-            </ul>
-          </Section>
+      <TimeRange
+        title="Integration Engineering at TechHub"
+        from="September 2024"
+        to="November 2024"
+      >
+        <p>
+          The training included a general background in servers and cloud
+          computing, basic backend development with NodeJS and Loopback, and
+          fundamentals of IBM MQ and AppConnect Enterprise Toolkit.
+        </p>
+      </TimeRange>
+    </Section>
 
-          <Section title="Trainings">
-            <p class="text-lg font-semibold">
-              Integration Engineering at TechHub
-            </p>
-            <p>
-              The training included general background on servers & cloud
-              computing, basic backend development with NodeJS, and fundamentals
-              of IBM MQ and AppConnect Enterprise Toolkit.
-            </p>
-            <Tag primary>Late 2024</Tag>
-          </Section>
+    <Section title="Courses">
+      <ul class="font-mono">
+        <li>Webflow 101</li>
+        <li>Webflow CMS & dynamic content</li>
+        <li>Webflow SEO fundamentals</li>
+        <li>MongoDB NodeJS Developer Path</li>
+        <li>Back-End Web Development with .NET on Linkedin</li>
+      </ul>
+    </Section>
 
-          <Section title="Side Projects">
-            <p>
-              <a href="https://code-critic.vercel.app" target="_blank"
-                >Code Critic</a
-              > (<a
-                href="https://github.com/bdocoder/code-critic"
-                target="_blank">source code</a
-              >) - A simple bug tracker where a user can create or resolve
-              tickets within a project they're a member of.
-            </p>
-          </Section>
+    <Section title="Education">
+      <TimeRange
+        title="College of Science at Fayyum University"
+        from="2019"
+        to="2023"
+      >
+        Bachelor's degree in Mathematics and Computer Science
+      </TimeRange>
+    </Section>
 
-          <Section title="Skills">
-            <div class="tag-container">
-              <Tag>TypeScript</Tag>
-              <Tag>React</Tag>
-              <Tag>Vue</Tag>
-              <Tag>NextJS</Tag>
-              <Tag>Astro</Tag>
-              <Tag>SQL</Tag>
-              <Tag>MongoDB</Tag>
-              <Tag>Go (Basics)</Tag>
-              <Tag>Java</Tag>
-              <Tag>Python</Tag>
-              <Tag>Linux</Tag>
-              <Tag>Webflow</Tag>
-            </div>
-          </Section>
-        </div>
-      </div>
-    </div>
+    <Section title="Side Projects">
+      <p>
+        Code Critic — A simple bug tracker built with React, Remix, ShadcnUI,
+        and MongoDB.
+      </p>
+      <p>
+        My CV — This resume is written with Astro (a JS framework) and
+        TailwindCSS. It is available on my GitHub profile with a script for
+        automated PDF generation.
+      </p>
+    </Section>
+
+    <Section title="Skills">
+      <ul class="grid gap-1 font-mono">
+        <li>
+          Languages:
+          <Skill>JS/TS</Skill>
+          <Skill>Go</Skill>
+          <Skill>Java</Skill>
+        </li>
+        <li>
+          Frontend:
+          <Skill>React/Next/Remix</Skill>
+          <Skill>Vue</Skill>
+          <Skill>TailwindCSS</Skill>
+        </li>
+        <li>
+          Backend:
+          <Skill>SQL</Skill>
+          <Skill>MongoDB</Skill>
+          <Skill>Node.js</Skill>
+        </li>
+        <li>
+          Testing:
+          <Skill>Selenium</Skill>
+          <Skill>Playwright</Skill>
+          <Skill>Postman</Skill>
+        </li>
+        <li>
+          Tools/Other
+          <Skill>Linux</Skill>
+          <Skill>Git</Skill>
+        </li>
+      </ul>
+    </Section>
   </body>
 </html>
