@@ -1,5 +1,7 @@
 import { chromium } from "playwright";
 import { preview } from "astro";
+import { join } from "path";
+import { cwd } from "process";
 
 const PORT = 4321;
 const server = await preview({
@@ -24,3 +26,5 @@ await page.pdf({
 
 await browser.close();
 await server.stop();
+
+console.log(`the cv was created at ${join(cwd(), "public", "cv.pdf")}`);
