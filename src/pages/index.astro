@@ -11,6 +11,8 @@ import {
   MailIcon,
   PhoneIcon,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Block from "@/components/block.astro";
 ---
 
 <!doctype html>
@@ -22,13 +24,13 @@ import {
   </head>
   <body class="container max-w-2xl">
     <Section withSpacing={false}>
-      <h1 class="text-3xl font-bold mb-3">Abdullah Ahmad</h1>
-      <p class="mb-1">Web Developer and Software Tester</p>
-      <p class="flex items-center gap-2 mb-4">
-        <GlobeIcon className="size-4" />
-        <span>Fayyum - Egypt (Available to relocate)</span>
-      </p>
-      <div class="flex gap-2 print:flex-col">
+      <h1 class="text-4xl font-bold mb-3">Abdullah Ahmad</h1>
+      <p class="text-xl mb-4">Web Developer and Software Tester</p>
+      <div class="flex flex-col items-start gap-1">
+        <Button variant="ghost">
+          <GlobeIcon className="size-4" />
+          <span>Fayyum, Egypt — Willing to relocate nationally</span>
+        </Button>
         <Link
           icon={MailIcon}
           href="mailto:bdocoder@gmail.com"
@@ -37,7 +39,7 @@ import {
           bdocoder@gmail.com
         </Link>
         <Link icon={PhoneIcon} href="tel:+201001004759" ariaLabel="phone">
-          +20 100 100 4759
+          +20-100-100-4759
         </Link>
         <!-- TODO: use non-deprecated icons -->
         <Link
@@ -52,119 +54,186 @@ import {
         />
       </div>
     </Section>
+
     <Section title="Summary">
       <p>
         A full-stack web developer and software tester with strong skills in
-        JavaScript, React, Node.js, and automated testing. Passionate about
-        building performant, maintainable applications and continuously learning
-        new technologies.
+        JavaScript, React, Node.js, and automated testing. Experienced in
+        building accessible, maintainable applications and writing structured
+        end-to-end and API tests. Passionate about performance, code quality,
+        and continuous learning.
       </p>
     </Section>
 
     <Section title="Trainings and Internships">
-      <TimeRange
-        title="Software Testing at ITI"
-        from="March 2025"
-        to="July 2025"
-      >
-        <p>The internship included training and hands-on practice in:</p>
-        <ul>
-          <li>Linux</li>
-          <li>Communication and Presentation Skills</li>
-          <li>SQL Server</li>
-          <li>Computer Networks and Operating Systems</li>
-          <li>C, C++, and Java</li>
-          <li>HTML and CSS</li>
-          <li>Web and API Testing</li>
-          <li>Test Case Design and Bug Report Writing</li>
+      <Block>
+        <TimeRange
+          title="Software Testing at ITI"
+          from="March 2025"
+          to="August 2025"
+        >
+          <p>The internship included training and hands-on practice in:</p>
+          <ul>
+            <li>Linux</li>
+            <li>Communication and Presentation Skills</li>
+            <li>SQL Server</li>
+            <li>Computer Networks and Operating Systems</li>
+            <li>C, C++, and Java</li>
+            <li>HTML and CSS</li>
+            <li>Web and API Testing</li>
+            <li>Test Case Design and Bug Report Writing</li>
+            <li>CV Writing and Interviewing Skills</li>
+            <li>Software Engineering</li>
+          </ul>
+        </TimeRange>
+      </Block>
+
+      <Block>
+        <TimeRange
+          title="Integration Engineering at TechHub"
+          from="September 2024"
+          to="November 2024"
+        >
+          <p>
+            Gained hands-on experience with backend development using Node.js
+            and Loopback. Explored server environments, cloud infrastructure
+            basics, and worked with enterprise tools such as IBM MQ and App
+            Connect Enterprise.
+          </p>
+        </TimeRange>
+      </Block>
+    </Section>
+
+    <Block>
+      <Section title="Courses">
+        <ul class="font-mono">
+          <li>Webflow 101 + CMS + SEO (Webflow University, August 2024)</li>
+          <li>
+            MongoDB NodeJS Developer Path (MongoDB University, August 2024)
+          </li>
+          <li>Back-End Web Development with .NET (LinkedIn, August 2024)</li>
+          <li>
+            Postman API Testing - Step by Step for Beginners (Udemy Business,
+            July 2025)
+          </li>
+          <li>PHP for Beginners (Laracasts, July 2025)</li>
+          <li>Laravel Essential Training (LinkedIn, July 2025)</li>
         </ul>
-      </TimeRange>
+      </Section>
+    </Block>
 
-      <TimeRange
-        title="Integration Engineering at TechHub"
-        from="September 2024"
-        to="November 2024"
-      >
-        <p>
-          The training included a general background in servers and cloud
-          computing, basic backend development with NodeJS and Loopback, and
-          fundamentals of IBM MQ and AppConnect Enterprise Toolkit.
-        </p>
-      </TimeRange>
+    <Block>
+      <Section title="Education">
+        <TimeRange
+          title="College of Science at Fayyum University"
+          from="2019"
+          to="2023"
+        >
+          Bachelor's degree in Mathematics and Computer Science. Developed the
+          backend of a real estate listing platform as a final project using
+          Deno with the Oak framework and MongoDB.
+        </TimeRange>
+      </Section>
+    </Block>
+
+    <Section title="Experience">
+      <Block>
+        <TimeRange
+          title="Code Critic — Bug Tracker App"
+          from="December 2024"
+          hideTo
+        >
+          <p>
+            Built a full-stack bug tracker with React, Remix, ShadcnUI, and
+            MongoDB. Implemented authentication and role-based access control.
+            Focused on clean UI and maintainability.
+          </p>
+        </TimeRange>
+      </Block>
+
+      <Block>
+        <TimeRange title="My CV" from="July 2025" hideTo>
+          <p>
+            Created a resume site using Astro and TailwindCSS. Designed to be
+            accessible and ATS-friendly, with automated PDF generation using
+            Playwright. Available on GitHub as an open-source project.
+          </p>
+        </TimeRange>
+      </Block>
+
+      <Block>
+        <TimeRange
+          title="Swag Labs Automation Testing"
+          from="July 2025"
+          to="August 2025"
+        >
+          <p>
+            Developed end-to-end Selenium WebDriver tests for the Swag Labs demo
+            site. Covered login workflows, sorting functionality, and reusable
+            test helpers using TestNG. Focused on selector strategy and test
+            structure quality.
+          </p>
+        </TimeRange>
+      </Block>
+
+      <Block>
+        <TimeRange
+          title="PocketBase API Testing"
+          from="July 2025"
+          to="August 2025"
+        >
+          <p>
+            Designed and ran API test scenarios using Postman against a
+            PocketBase backend. Wrote test cases covering CRUD operations,
+            authentication, and edge conditions. Practiced structured bug
+            reporting and collaborative testing methods.
+          </p>
+        </TimeRange>
+      </Block>
     </Section>
 
-    <Section title="Courses">
-      <ul class="font-mono">
-        <li>Webflow 101 (Webflow University, August 2024)</li>
-        <li>Webflow CMS & dynamic content (Webflow University, August 2024)</li>
-        <li>Webflow SEO fundamentals (Webflow University, August 2024)</li>
-        <li>MongoDB NodeJS Developer Path (MongoDB University, August 2024)</li>
-        <li>Back-End Web Development with .NET (LinkedIn, August 2024)</li>
-        <li>
-          Postman API Testing - Step by Step for Beginners (Udemy Business, July
-          2025)
-        </li>
-        <li>PHP for Beginners (Laracasts, July 2025)</li>
-        <li>Laravel Essential Training (LinkedIn, July 2025)</li>
-      </ul>
-    </Section>
-
-    <Section title="Education">
-      <TimeRange
-        title="College of Science at Fayyum University"
-        from="2019"
-        to="2023"
-      >
-        Bachelor's degree in Mathematics and Computer Science
-      </TimeRange>
-    </Section>
-
-    <Section title="Side Projects">
-      <p>
-        Code Critic — A simple bug tracker built with React, Remix, ShadcnUI,
-        and MongoDB.
-      </p>
-      <p>
-        My CV — This resume is written with Astro (a JS framework) and
-        TailwindCSS. It is available on my GitHub profile with a script for
-        automated PDF generation.
-      </p>
-    </Section>
-
-    <Section title="Skills">
-      <ul class="grid gap-1 font-mono">
-        <li>
-          Languages:
-          <Skill>JS/TS</Skill>
-          <Skill>Go</Skill>
-          <Skill>Java</Skill>
-          <Skill>PHP</Skill>
-        </li>
-        <li>
-          Frontend:
-          <Skill>React/Next/Remix</Skill>
-          <Skill>Vue</Skill>
-          <Skill>TailwindCSS</Skill>
-        </li>
-        <li>
-          Backend:
-          <Skill>SQL</Skill>
-          <Skill>MongoDB</Skill>
-          <Skill>Node.js</Skill>
-          <Skill>Laravel</Skill>
-        </li>
-        <li>
-          Testing:
-          <Skill>Selenium</Skill>
-          <Skill>Playwright</Skill>
-          <Skill>Postman</Skill>
-        </li>
-        <li>
-          Tools/Other
-          <Skill>Linux</Skill>
-          <Skill>Git</Skill>
-        </li>
-      </ul>
-    </Section>
+    <Block>
+      <Section title="Skills">
+        <ul class="grid gap-1 font-mono">
+          <li>
+            Languages:
+            <Skill>JS/TS</Skill>
+            <Skill>Go</Skill>
+            <Skill>Java</Skill>
+            <Skill>PHP</Skill>
+          </li>
+          <li>
+            Frontend:
+            <Skill>React</Skill>
+            <Skill>Next</Skill>
+            <Skill>Vue</Skill>
+            <Skill>TailwindCSS</Skill>
+          </li>
+          <li>
+            Backend:
+            <Skill>Node.js</Skill>
+            <Skill>Laravel</Skill>
+          </li>
+          <li>
+            Databases:
+            <Skill>SQLite</Skill>
+            <Skill>SQL Server</Skill>
+            <Skill>MongoDB</Skill>
+          </li>
+          <li>
+            Testing:
+            <Skill>Selenium</Skill>
+            <Skill>Playwright</Skill>
+            <Skill>Postman</Skill>
+            <Skill>Rest Assured</Skill>
+          </li>
+          <li>
+            Tools/Other:
+            <Skill>Linux</Skill>
+            <Skill>Git</Skill>
+          </li>
+        </ul>
+      </Section>
+    </Block>
   </body>
 </html>

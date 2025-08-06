@@ -3,6 +3,7 @@ interface Props {
   title: string;
   from: string;
   to?: string;
+  hideTo?: boolean;
 }
 
 const props = Astro.props;
@@ -14,8 +15,13 @@ const props = Astro.props;
     <div class="m-auto"></div>
     <div class="text-lg font-mono">
       <span>{props.from}</span>
-      —
-      <span>{props.to ?? "Present"}</span>
+      {
+        props.hideTo ? null : (
+          <>
+            — <span>{props.to ?? "Present"}</span>
+          </>
+        )
+      }
     </div>
   </div>
 

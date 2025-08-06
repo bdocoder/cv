@@ -10,14 +10,10 @@ interface Props {
 const props = Astro.props;
 ---
 
-<a href={props.href} target="_blank" aria-label={props.ariaLabel}>
-  <Button
-    className="print:border-transparent cursor-pointer"
-    variant="outline"
-    size="icon"
-  >
-    <props.icon />
-    <span class="not-print:hidden">
+<a href={props.href} target="_blank">
+  <Button className="cursor-pointer" variant="link">
+    <props.icon aria-label={props.ariaLabel} />
+    <span>
       <slot>
         {props.href}
       </slot>
