@@ -29,7 +29,7 @@ import Block from "@/components/block.astro";
       <div class="flex flex-col items-start gap-1">
         <Button variant="ghost">
           <GlobeIcon className="size-4" />
-          <span>Fayyum, Egypt — Willing to relocate nationally</span>
+          <span>Fayyum, Egypt — Available to relocate</span>
         </Button>
         <Link
           icon={MailIcon}
@@ -63,6 +63,101 @@ import Block from "@/components/block.astro";
         end-to-end and API tests. Passionate about performance, code quality,
         and continuous learning.
       </p>
+    </Section>
+
+    <Block>
+      <Section title="Skills">
+        <ul class="grid gap-1 font-mono">
+          <li>
+            Soft Skills:
+            <Skill>Presentation</Skill>
+            <Skill>Time Management</Skill>
+          </li>
+          <li>
+            Programming Languages:
+            <Skill>JavaScript</Skill>
+            <Skill>Go</Skill>
+            <Skill>Java</Skill>
+            <Skill>PHP</Skill>
+          </li>
+          <li>
+            Frontend:
+            <Skill>React</Skill>
+            <Skill>Vue</Skill>
+            <Skill>TailwindCSS</Skill>
+          </li>
+          <li>
+            Backend:
+            <Skill>NodeJS</Skill>
+            <Skill>DenoJS</Skill>
+            <Skill>Laravel</Skill>
+          </li>
+          <li>
+            Databases:
+            <Skill>SQLite</Skill>
+            <Skill>SQL Server</Skill>
+            <Skill>MongoDB</Skill>
+          </li>
+          <li>
+            Testing:
+            <Skill>Selenium</Skill>
+            <Skill>Playwright</Skill>
+            <Skill>Cypress</Skill>
+            <Skill>Postman</Skill>
+            <Skill>Rest Assured</Skill>
+          </li>
+          <li>
+            Tools/Other:
+            <Skill>Linux</Skill>
+            <Skill>Git</Skill>
+          </li>
+        </ul>
+      </Section>
+    </Block>
+
+    <Section title="Experience">
+      <Block>
+        <TimeRange
+          title="Swag Labs Automation Testing"
+          from="July 2025"
+          to="August 2025"
+        >
+          <p>
+            Developed end-to-end tests for the Swag Labs demo site using
+            Selenium WebDriver. Covered workflows like login, sorting, cart
+            management, and checkout, and reusable test helpers using TestNG.
+          </p>
+        </TimeRange>
+      </Block>
+
+      <Block>
+        <TimeRange
+          title="PocketBase API Testing"
+          from="July 2025"
+          to="August 2025"
+        >
+          <p>
+            Created and executed API test scenarios for a PocketBase backend
+            using Postman and RestAssured. Designed requests for CRUD
+            operations, authentication, and edge case handling. Focused on clean
+            structure and re-usable test logic.
+          </p>
+        </TimeRange>
+      </Block>
+
+      <Block>
+        <TimeRange
+          title="Code Critic — Bug Tracker App"
+          from="December 2024"
+          hideTo
+        >
+          <p>
+            Built a full-stack bug tracker with React, Remix, ShadcnUI, and
+            MongoDB. Implemented authentication and role-based access control.
+            Focused on clean UI and maintainability.
+          </p>
+        </TimeRange>
+      </Block>
     </Section>
 
     <Section title="Trainings and Internships">
@@ -105,24 +200,6 @@ import Block from "@/components/block.astro";
     </Section>
 
     <Block>
-      <Section title="Courses">
-        <ul class="font-mono">
-          <li>Webflow 101 + CMS + SEO (Webflow University, August 2024)</li>
-          <li>
-            MongoDB NodeJS Developer Path (MongoDB University, August 2024)
-          </li>
-          <li>Back-End Web Development with .NET (LinkedIn, August 2024)</li>
-          <li>
-            Postman API Testing - Step by Step for Beginners (Udemy Business,
-            July 2025)
-          </li>
-          <li>PHP for Beginners (Laracasts, July 2025)</li>
-          <li>Laravel Essential Training (LinkedIn, July 2025)</li>
-        </ul>
-      </Section>
-    </Block>
-
-    <Block>
       <Section title="Education">
         <TimeRange
           title="College of Science at Fayyum University"
@@ -136,102 +213,30 @@ import Block from "@/components/block.astro";
       </Section>
     </Block>
 
-    <Section title="Experience">
-      <Block>
-        <TimeRange
-          title="Code Critic — Bug Tracker App"
-          from="December 2024"
-          hideTo
-        >
-          <p>
-            Built a full-stack bug tracker with React, Remix, ShadcnUI, and
-            MongoDB. Implemented authentication and role-based access control.
-            Focused on clean UI and maintainability.
-          </p>
-        </TimeRange>
-      </Block>
-
-      <Block>
-        <TimeRange title="My CV" from="July 2025" hideTo>
-          <p>
-            Created a resume site using Astro and TailwindCSS. Designed to be
-            accessible and ATS-friendly, with automated PDF generation using
-            Playwright. Available on GitHub as an open-source project.
-          </p>
-        </TimeRange>
-      </Block>
-
-      <Block>
-        <TimeRange
-          title="Swag Labs Automation Testing"
-          from="July 2025"
-          to="August 2025"
-        >
-          <p>
-            Developed end-to-end tests for the Swag Labs demo site using
-            Selenium WebDriver. Covered workflows like login, sorting, cart
-            management, and checkout, and reusable test helpers using TestNG.
-          </p>
-        </TimeRange>
-      </Block>
-
-      <Block>
-        <TimeRange
-          title="PocketBase API Testing"
-          from="July 2025"
-          to="August 2025"
-        >
-          <p>
-            Created and executed API test scenarios for a PocketBase backend
-            using Postman and RestAssured. Designed requests for CRUD
-            operations, authentication, and edge case handling. Focused on clean
-            structure and re-usable test logic.
-          </p>
-        </TimeRange>
-      </Block>
-    </Section>
+    <Block>
+      <Section title="Courses">
+        <ul class="font-mono">
+          <li>Laravel Essential Training (LinkedIn, July 2025)</li>
+          <li>PHP for Beginners (Laracasts, July 2025)</li>
+          <li>
+            Postman API Testing - Step by Step for Beginners (Udemy Business,
+            July 2025)
+          </li>
+          <li>
+            MongoDB NodeJS Developer Path (MongoDB University, August 2024)
+          </li>
+          <li>Back-End Web Development with .NET (LinkedIn, August 2024)</li>
+        </ul>
+      </Section>
+    </Block>
 
     <Block>
-      <Section title="Skills">
-        <ul class="grid gap-1 font-mono">
-          <li>
-            Languages:
-            <Skill>JS/TS</Skill>
-            <Skill>Go</Skill>
-            <Skill>Java</Skill>
-            <Skill>PHP</Skill>
-          </li>
-          <li>
-            Frontend:
-            <Skill>React</Skill>
-            <Skill>Next</Skill>
-            <Skill>Vue</Skill>
-            <Skill>TailwindCSS</Skill>
-          </li>
-          <li>
-            Backend:
-            <Skill>Node.js</Skill>
-            <Skill>Laravel</Skill>
-          </li>
-          <li>
-            Databases:
-            <Skill>SQLite</Skill>
-            <Skill>SQL Server</Skill>
-            <Skill>MongoDB</Skill>
-          </li>
-          <li>
-            Testing:
-            <Skill>Selenium</Skill>
-            <Skill>Playwright</Skill>
-            <Skill>Postman</Skill>
-            <Skill>Rest Assured</Skill>
-          </li>
-          <li>
-            Tools/Other:
-            <Skill>Linux</Skill>
-            <Skill>Git</Skill>
-          </li>
-        </ul>
+      <Section title="Languages">
+        <div class="flex gap-2">
+          <span>Arabic</span>
+          -
+          <span>English</span>
+        </div>
       </Section>
     </Block>
   </body>
