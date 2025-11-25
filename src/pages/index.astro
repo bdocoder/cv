@@ -11,7 +11,6 @@ import {
   MailIcon,
   PhoneIcon,
 } from "lucide-react";
-import Block from "@/components/block.astro";
 ---
 
 <!doctype html>
@@ -66,203 +65,182 @@ import Block from "@/components/block.astro";
       </p>
     </Section>
 
-    <Block>
-      <Section title="Skills">
-        <ul class="font-mono">
-          <li>
-            Soft Skills:
-            <Skill>Presentation</Skill>
-            <Skill>Time Management</Skill>
-          </li>
-          <li>
-            Programming Languages:
-            <Skill>JavaScript</Skill>
-            <Skill>Go</Skill>
-            <Skill>Java</Skill>
-            <Skill>PHP</Skill>
-          </li>
-          <li>
-            Frontend:
-            <Skill>React</Skill>
-            <Skill>TailwindCSS</Skill>
-          </li>
-          <li>
-            Backend:
-            <Skill>NodeJS</Skill>
-            <Skill>NextJS</Skill>
-            <Skill>Laravel</Skill>
-          </li>
-          <li>
-            Databases:
-            <Skill>SQLite</Skill>
-            <Skill>SQL Server</Skill>
-            <Skill>MongoDB</Skill>
-          </li>
-          <li>
-            Testing:
-            <Skill>Selenium</Skill>
-            <Skill>Playwright</Skill>
-            <Skill>Cypress</Skill>
-            <Skill>Postman</Skill>
-            <Skill>Rest Assured</Skill>
-          </li>
-          <li>
-            Tools/Other:
-            <Skill>Linux</Skill>
-            <Skill>Git</Skill>
-          </li>
-        </ul>
-      </Section>
-    </Block>
+    <Section title="Skills">
+      <ul class="font-mono">
+        <li>
+          Soft Skills:
+          <Skill>Presentation</Skill>
+          <Skill>Time Management</Skill>
+        </li>
+        <li>
+          Programming Languages:
+          <Skill>JavaScript</Skill>
+          <Skill>Go</Skill>
+          <Skill>Java</Skill>
+          <Skill>PHP</Skill>
+        </li>
+        <li>
+          Frontend:
+          <Skill>React</Skill>
+          <Skill>TailwindCSS</Skill>
+        </li>
+        <li>
+          Backend:
+          <Skill>NodeJS</Skill>
+          <Skill>NextJS</Skill>
+          <Skill>Laravel</Skill>
+        </li>
+        <li>
+          Databases:
+          <Skill>SQLite</Skill>
+          <Skill>SQL Server</Skill>
+          <Skill>MongoDB</Skill>
+        </li>
+        <li>
+          Testing:
+          <Skill>Selenium</Skill>
+          <Skill>Playwright</Skill>
+          <Skill>Cypress</Skill>
+          <Skill>Postman</Skill>
+          <Skill>Rest Assured</Skill>
+        </li>
+        <li>
+          Tools/Other:
+          <Skill>Linux</Skill>
+          <Skill>Git</Skill>
+        </li>
+      </ul>
+    </Section>
 
     <Section title="Experience">
       <div class="space-y-8">
-        <Block>
-          <TimeRange title="Weather App" from="September 2025" hideTo>
-            <p>
-              Built an app that displays real-time weather info for selected
-              cities (temperature, wind speed, humidity, and precipitation) with
-              customizable measurement units and hourly forecasts. Leverages
-              Meteo API for accurate data retrieval and uses TailwindCSS, React,
-              and Tanstack Query.
-            </p>
+        <TimeRange title="Weather App" from="September 2025" hideTo>
+          <p>
+            Built an app that displays real-time weather info for selected
+            cities (temperature, wind speed, humidity, and precipitation) with
+            customizable measurement units and hourly forecasts. Leverages Meteo
+            API for accurate data retrieval and uses TailwindCSS, React, and
+            Tanstack Query.
+          </p>
 
-            <p>
-              Demo: <a href="https://bdocoder-weather-app.vercel.app"
-                >https://bdocoder-weather-app.vercel.app</a
-              >
-            </p>
-          </TimeRange>
-        </Block>
-        <Block>
-          <TimeRange
-            title="Swag Labs Automation Testing"
-            from="July 2025"
-            to="August 2025"
-          >
-            <p>
-              Developed end-to-end tests for the Swag Labs demo site using
-              Selenium WebDriver. Covered workflows like login, sorting, cart
-              management, and checkout, and reusable test helpers using TestNG.
-            </p>
-          </TimeRange>
-        </Block>
+          <p>
+            Demo: <a href="https://bdocoder-weather-app.vercel.app"
+              >https://bdocoder-weather-app.vercel.app</a
+            >
+          </p>
+        </TimeRange>
 
-        <Block>
-          <TimeRange
-            title="PocketBase API Testing"
-            from="July 2025"
-            to="August 2025"
-          >
-            <p>
-              Created and executed API test scenarios for a PocketBase backend
-              using Postman and RestAssured. Designed requests for CRUD
-              operations, authentication, and edge case handling. Focused on
-              clean structure and re-usable test logic.
-            </p>
-          </TimeRange>
-        </Block>
+        <TimeRange
+          title="Swag Labs Automation Testing"
+          from="July 2025"
+          to="August 2025"
+        >
+          <p>
+            Developed end-to-end tests for the Swag Labs demo site using
+            Selenium WebDriver. Covered workflows like login, sorting, cart
+            management, and checkout, and reusable test helpers using TestNG.
+          </p>
+        </TimeRange>
 
-        <Block>
-          <TimeRange
-            title="Code Critic — Bug Tracker App"
-            from="December 2024"
-            hideTo
-          >
-            <p>
-              Built a full-stack bug tracker with React, Remix, ShadcnUI, and
-              MongoDB. Implemented authentication and role-based access control.
-              Focused on clean UI and maintainability.
-            </p>
+        <TimeRange
+          title="PocketBase API Testing"
+          from="July 2025"
+          to="August 2025"
+        >
+          <p>
+            Created and executed API test scenarios for a PocketBase backend
+            using Postman and RestAssured. Designed requests for CRUD
+            operations, authentication, and edge case handling. Focused on clean
+            structure and re-usable test logic.
+          </p>
+        </TimeRange>
 
-            <p>
-              Demo: <a href="https://code-critic.vercel.app"
-                >https://code-critic.vercel.app</a
-              >
-            </p>
-          </TimeRange>
-        </Block>
+        <TimeRange
+          title="Code Critic — Bug Tracker App"
+          from="December 2024"
+          hideTo
+        >
+          <p>
+            Built a full-stack bug tracker with React, Remix, ShadcnUI, and
+            MongoDB. Implemented authentication and role-based access control.
+            Focused on clean UI and maintainability.
+          </p>
+
+          <p>
+            Demo: <a href="https://code-critic.vercel.app"
+              >https://code-critic.vercel.app</a
+            >
+          </p>
+        </TimeRange>
       </div>
     </Section>
 
     <Section title="Trainings and Internships">
-      <Block>
-        <TimeRange
-          title="Software Testing at ITI"
-          from="March 2025"
-          to="August 2025"
-        >
-          <p>The internship included training and hands-on practice in:</p>
-          <ul>
-            <li>Linux</li>
-            <li>Communication and Presentation Skills</li>
-            <li>SQL Server</li>
-            <li>Computer Networks and Operating Systems</li>
-            <li>C, C++, and Java</li>
-            <li>HTML and CSS</li>
-            <li>Web and API Testing</li>
-            <li>Test Case Design and Bug Report Writing</li>
-            <li>CV Writing and Interviewing Skills</li>
-            <li>Software Engineering</li>
-          </ul>
-        </TimeRange>
-      </Block>
+      <TimeRange
+        title="Software Testing at ITI"
+        from="March 2025"
+        to="August 2025"
+      >
+        <p>The internship included training and hands-on practice in:</p>
+        <ul>
+          <li>Linux</li>
+          <li>Communication and Presentation Skills</li>
+          <li>SQL Server</li>
+          <li>Computer Networks and Operating Systems</li>
+          <li>C, C++, and Java</li>
+          <li>HTML and CSS</li>
+          <li>Web and API Testing</li>
+          <li>Test Case Design and Bug Report Writing</li>
+          <li>CV Writing and Interviewing Skills</li>
+          <li>Software Engineering</li>
+        </ul>
+      </TimeRange>
 
-      <Block>
-        <TimeRange
-          title="Integration Engineering at TechHub"
-          from="September 2024"
-          to="November 2024"
-        >
-          <p>
-            Gained hands-on experience with backend development using Node.js
-            and Loopback. Explored server environments, cloud infrastructure
-            basics, and worked with enterprise tools such as IBM MQ and App
-            Connect Enterprise.
-          </p>
-        </TimeRange>
-      </Block>
+      <TimeRange
+        title="Integration Engineering at TechHub"
+        from="September 2024"
+        to="November 2024"
+      >
+        <p>
+          Gained hands-on experience with backend development using Node.js and
+          Loopback. Explored server environments, cloud infrastructure basics,
+          and worked with enterprise tools such as IBM MQ and App Connect
+          Enterprise.
+        </p>
+      </TimeRange>
     </Section>
 
-    <Block>
-      <Section title="Education">
-        <TimeRange
-          title="College of Science at Fayyum University"
-          from="2019"
-          to="2023"
-        >
-          Bachelor's degree in Mathematics and Computer Science. Developed the
-          backend of a real estate listing platform as a final project using
-          Deno with the Oak framework and MongoDB.
-        </TimeRange>
-      </Section>
-    </Block>
+    <Section title="Education">
+      <TimeRange
+        title="College of Science at Fayyum University"
+        from="2019"
+        to="2023"
+      >
+        Bachelor's degree in Mathematics and Computer Science. Developed the
+        backend of a real estate listing platform as a final project using Deno
+        with the Oak framework and MongoDB.
+      </TimeRange>
+    </Section>
 
-    <Block>
-      <Section title="Courses">
-        <ul class="font-mono">
-          <li>Laravel Essential Training (LinkedIn, July 2025)</li>
-          <li>PHP for Beginners (Laracasts, July 2025)</li>
-          <li>
-            Postman API Testing - Step by Step for Beginners (Udemy Business,
-            July 2025)
-          </li>
-          <li>
-            MongoDB NodeJS Developer Path (MongoDB University, August 2024)
-          </li>
-          <li>Back-End Web Development with .NET (LinkedIn, August 2024)</li>
-        </ul>
-      </Section>
-    </Block>
+    <Section title="Courses">
+      <ul class="font-mono">
+        <li>Laravel Essential Training (LinkedIn, July 2025)</li>
+        <li>PHP for Beginners (Laracasts, July 2025)</li>
+        <li>
+          Postman API Testing - Step by Step for Beginners (Udemy Business, July
+          2025)
+        </li>
+        <li>MongoDB NodeJS Developer Path (MongoDB University, August 2024)</li>
+        <li>Back-End Web Development with .NET (LinkedIn, August 2024)</li>
+      </ul>
+    </Section>
 
-    <Block>
-      <Section title="Languages">
-        <div class="flex gap-2">
-          <span>Arabic</span>
-          -
-          <span>English</span>
-        </div>
-      </Section>
-    </Block>
+    <Section title="Languages">
+      <div class="flex gap-2">
+        <span>Arabic</span>
+        -
+        <span>English</span>
+      </div>
+    </Section>
   </body>
 </html>
