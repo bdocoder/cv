@@ -9,11 +9,11 @@ interface Props {
 const props = Astro.props;
 ---
 
-<div class="grid gap-2">
-  <div class="flex">
-    <h2 class="text-lg font-medium">{props.title}</h2>
+<div>
+  <div class="flex items-center">
+    <h2 class="not-prose text-lg font-medium">{props.title}</h2>
     <div class="m-auto"></div>
-    <div class="text-lg font-mono">
+    <div class="font-mono">
       <span>{props.from}</span>
       {
         props.hideTo ? null : (

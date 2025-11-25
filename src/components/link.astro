@@ -1,6 +1,4 @@
 ---
-import { Button } from "./ui/button";
-
 interface Props {
   icon: any;
   href: string;
@@ -10,13 +8,11 @@ interface Props {
 const props = Astro.props;
 ---
 
-<a href={props.href} target="_blank">
-  <Button className="cursor-pointer" variant="link">
-    <props.icon aria-label={props.ariaLabel} />
-    <span>
-      <slot>
-        {props.href}
-      </slot>
-    </span>
-  </Button>
+<a class="text-link" href={props.href} target="_blank">
+  <props.icon aria-label={props.ariaLabel} width="20px" />
+  <span>
+    <slot>
+      {props.href}
+    </slot>
+  </span>
 </a>

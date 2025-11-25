@@ -11,7 +11,6 @@ import {
   MailIcon,
   PhoneIcon,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Block from "@/components/block.astro";
 ---
 
@@ -22,15 +21,17 @@ import Block from "@/components/block.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Abdullah Ahmad — CV</title>
   </head>
-  <body class="container max-w-2xl">
-    <Section withSpacing={false}>
-      <h1 class="text-4xl font-bold mb-3">Abdullah Ahmad</h1>
-      <p class="text-xl mb-4">Web Developer and Software Tester</p>
-      <div class="flex flex-col items-start gap-1">
-        <Button variant="ghost">
-          <GlobeIcon className="size-4" />
+  <body
+    class="container max-w-2xl prose prose-hr:mb-6 prose-hr:border-foreground"
+  >
+    <div class="pt-8">
+      <h1 class="mb-0">Abdullah Ahmad</h1>
+      <p class="text-xl">Web Developer and Software Tester</p>
+      <div>
+        <span class="text-link">
+          <GlobeIcon className="size-5" />
           <span>Fayyum, Egypt — Available to relocate</span>
-        </Button>
+        </span>
         <Link
           icon={MailIcon}
           href="mailto:bdocoder@gmail.com"
@@ -53,7 +54,7 @@ import Block from "@/components/block.astro";
           ariaLabel="linkedin"
         />
       </div>
-    </Section>
+    </div>
 
     <Section title="Summary">
       <p>
@@ -67,7 +68,7 @@ import Block from "@/components/block.astro";
 
     <Block>
       <Section title="Skills">
-        <ul class="grid gap-1 font-mono">
+        <ul class="font-mono">
           <li>
             Soft Skills:
             <Skill>Presentation</Skill>
@@ -115,71 +116,73 @@ import Block from "@/components/block.astro";
     </Block>
 
     <Section title="Experience">
-      <Block>
-        <TimeRange title="Weather App" from="September 2025" hideTo>
-          <p>
-            Built an app that displays real-time weather info for selected
-            cities (temperature, wind speed, humidity, and precipitation) with
-            customizable measurement units and hourly forecasts. Leverages Meteo
-            API for accurate data retrieval and uses TailwindCSS, React, and
-            Tanstack Query.
-          </p>
+      <div class="space-y-8">
+        <Block>
+          <TimeRange title="Weather App" from="September 2025" hideTo>
+            <p>
+              Built an app that displays real-time weather info for selected
+              cities (temperature, wind speed, humidity, and precipitation) with
+              customizable measurement units and hourly forecasts. Leverages
+              Meteo API for accurate data retrieval and uses TailwindCSS, React,
+              and Tanstack Query.
+            </p>
 
-          <p>
-            Demo: <a href="https://bdocoder-weather-app.vercel.app"
-              >https://bdocoder-weather-app.vercel.app</a
-            >
-          </p>
-        </TimeRange>
-      </Block>
-      <Block>
-        <TimeRange
-          title="Swag Labs Automation Testing"
-          from="July 2025"
-          to="August 2025"
-        >
-          <p>
-            Developed end-to-end tests for the Swag Labs demo site using
-            Selenium WebDriver. Covered workflows like login, sorting, cart
-            management, and checkout, and reusable test helpers using TestNG.
-          </p>
-        </TimeRange>
-      </Block>
+            <p>
+              Demo: <a href="https://bdocoder-weather-app.vercel.app"
+                >https://bdocoder-weather-app.vercel.app</a
+              >
+            </p>
+          </TimeRange>
+        </Block>
+        <Block>
+          <TimeRange
+            title="Swag Labs Automation Testing"
+            from="July 2025"
+            to="August 2025"
+          >
+            <p>
+              Developed end-to-end tests for the Swag Labs demo site using
+              Selenium WebDriver. Covered workflows like login, sorting, cart
+              management, and checkout, and reusable test helpers using TestNG.
+            </p>
+          </TimeRange>
+        </Block>
 
-      <Block>
-        <TimeRange
-          title="PocketBase API Testing"
-          from="July 2025"
-          to="August 2025"
-        >
-          <p>
-            Created and executed API test scenarios for a PocketBase backend
-            using Postman and RestAssured. Designed requests for CRUD
-            operations, authentication, and edge case handling. Focused on clean
-            structure and re-usable test logic.
-          </p>
-        </TimeRange>
-      </Block>
+        <Block>
+          <TimeRange
+            title="PocketBase API Testing"
+            from="July 2025"
+            to="August 2025"
+          >
+            <p>
+              Created and executed API test scenarios for a PocketBase backend
+              using Postman and RestAssured. Designed requests for CRUD
+              operations, authentication, and edge case handling. Focused on
+              clean structure and re-usable test logic.
+            </p>
+          </TimeRange>
+        </Block>
 
-      <Block>
-        <TimeRange
-          title="Code Critic — Bug Tracker App"
-          from="December 2024"
-          hideTo
-        >
-          <p>
-            Built a full-stack bug tracker with React, Remix, ShadcnUI, and
-            MongoDB. Implemented authentication and role-based access control.
-            Focused on clean UI and maintainability.
-          </p>
+        <Block>
+          <TimeRange
+            title="Code Critic — Bug Tracker App"
+            from="December 2024"
+            hideTo
+          >
+            <p>
+              Built a full-stack bug tracker with React, Remix, ShadcnUI, and
+              MongoDB. Implemented authentication and role-based access control.
+              Focused on clean UI and maintainability.
+            </p>
 
-          <p>
-            Demo: <a href="https://code-critic.vercel.app"
-              >https://code-critic.vercel.app</a
-            >
-          </p>
-        </TimeRange>
-      </Block>
+            <p>
+              Demo: <a href="https://code-critic.vercel.app"
+                >https://code-critic.vercel.app</a
+              >
+            </p>
+          </TimeRange>
+        </Block>
+      </div>
     </Section>
 
     <Section title="Trainings and Internships">
