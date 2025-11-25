@@ -1,7 +1,6 @@
 # My CV
 
-This is my CV, written with [Astro](https://astro.build) (a JS framework),
-[TailwindCSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com).
+This is my CV, written with [Astro](https://astro.build) (a JS framework) and [TailwindCSS](https://tailwindcss.com).
 
 ## Development
 
