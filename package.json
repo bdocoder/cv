@@ -1,28 +1,28 @@
 {
-  "name": "cv",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "build:cv": "node scripts/build-cv.js",
-    "postinstall": "playwright install chromium"
-  },
-  "devDependencies": {
-    "astro": "^5.11.0",
-    "playwright": "^1.57.0"
-  },
-  "dependencies": {
-    "@astrojs/react": "^4.3.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.11",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "lucide-react": "^0.525.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.11",
-    "vite-tsconfig-paths": "^5.1.4"
-  }
+	"name": "cv",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"build:cv": "tsx scripts/build-cv.ts",
+		"postinstall": "playwright install chromium",
+		"check": "biome check --write"
+	},
+	"devDependencies": {
+		"@astrojs/react": "^7.1.1",
+		"@biomejs/biome": "^2.6.3",
+		"@phosphor-icons/react": "^2.1.10",
+		"@tailwindcss/typography": "^0.5.20",
+		"@tailwindcss/vite": "^4.3.3",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
+		"astro": "^7.4.2",
+		"playwright": "^1.64.1",
+		"react": "^19.3.1",
+		"react-dom": "^19.3.1",
+		"tailwindcss": "^4.3.3",
+		"tsx": "^4.23.15"
+	}
 }

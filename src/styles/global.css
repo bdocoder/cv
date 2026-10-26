@@ -2,25 +2,25 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-background: var(--color-neutral-50);
-  --color-foreground: var(--color-neutral-950);
-  --color-muted: var(--color-neutral-900);
+	--color-background: var(--color-neutral-50);
+	--color-foreground: var(--color-neutral-950);
+	--color-muted: var(--color-neutral-900);
 
-  --text-link: 18px;
-  --text-link--line-height: 1;
+	--text-link: 18px;
+	--text-link--line-height: 1;
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground;
-  }
+	body {
+		@apply bg-background text-foreground;
+	}
 }
 
 @utility container {
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @utility text-link {
-  @apply flex gap-2 items-center mb-3 text-muted;
+	@apply flex gap-2 items-center mb-3 text-muted;
 }

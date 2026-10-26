@@ -1,16 +1,16 @@
 ---
 import "../styles/global.css";
+import {
+  EnvelopeSimpleIcon,
+  GithubLogoIcon,
+  GlobeIcon,
+  LinkedinLogoIcon,
+  PhoneIcon,
+} from "@phosphor-icons/react";
+import Link from "@/components/link.astro";
 import Section from "@/components/section.astro";
 import Skill from "@/components/skill.astro";
-import Link from "@/components/link.astro";
 import TimeRange from "@/components/time-range.astro";
-import {
-  GithubIcon,
-  GlobeIcon,
-  LinkedinIcon,
-  MailIcon,
-  PhoneIcon,
-} from "lucide-react";
 ---
 
 <!doctype html>
@@ -25,14 +25,14 @@ import {
   >
     <div class="pt-8">
       <h1 class="mb-0">Abdullah Ahmad</h1>
-      <p class="text-xl">Web Developer and Software Tester</p>
+      <p class="text-xl">Web Developer</p>
       <div>
         <span class="text-link">
           <GlobeIcon className="size-5" />
           <span>Fayyum, Egypt — Available to relocate</span>
         </span>
         <Link
-          icon={MailIcon}
+          icon={EnvelopeSimpleIcon}
           href="mailto:bdocoder@gmail.com"
           ariaLabel="email"
         >
@@ -41,14 +41,13 @@ import {
         <Link icon={PhoneIcon} href="tel:+201001004759" ariaLabel="phone">
           +20 100 100 4759
         </Link>
-        <!-- TODO: use non-deprecated icons -->
         <Link
-          icon={GithubIcon}
+          icon={GithubLogoIcon}
           href="https://github.com/bdocoder"
           ariaLabel="github"
         />
         <Link
-          icon={LinkedinIcon}
+          icon={LinkedinLogoIcon}
           href="https://linkedin.com/in/bdocoder"
           ariaLabel="linkedin"
         />
@@ -57,56 +56,67 @@ import {
 
     <Section title="Summary">
       <p>
-        A full-stack web developer and software tester with strong skills in
-        JavaScript, React, Node.js, and automated testing. Experienced in
-        building accessible, maintainable applications and writing structured
-        end-to-end and API tests. Passionate about performance, code quality,
-        and continuous learning.
+        I like building web apps that are useful, thoughtful, and easy to use. I
+        enjoy turning ideas into working products and learning as I go.
       </p>
     </Section>
 
     <Section title="Skills">
-      <ul class="font-mono">
+      <ul>
         <li>
           Soft Skills:
           <Skill>Presentation</Skill>
+          /
           <Skill>Time Management</Skill>
         </li>
         <li>
           Programming Languages:
           <Skill>JavaScript</Skill>
+          /
           <Skill>Go</Skill>
+          /
           <Skill>Java</Skill>
+          /
           <Skill>PHP</Skill>
         </li>
         <li>
           Frontend:
           <Skill>React</Skill>
-          <Skill>TailwindCSS</Skill>
+          /
+          <Skill>Tailwind CSS</Skill>
         </li>
         <li>
           Backend:
-          <Skill>NodeJS</Skill>
-          <Skill>NextJS</Skill>
+          <Skill>Node.js</Skill>
+          /
+          <Skill>Next.js</Skill>
+          /
           <Skill>Laravel</Skill>
         </li>
         <li>
           Databases:
           <Skill>SQLite</Skill>
+          /
           <Skill>SQL Server</Skill>
+          /
           <Skill>MongoDB</Skill>
         </li>
         <li>
           Testing:
           <Skill>Selenium</Skill>
+          /
           <Skill>Playwright</Skill>
+          /
           <Skill>Cypress</Skill>
+          /
           <Skill>Postman</Skill>
-          <Skill>Rest Assured</Skill>
+          /
+          <Skill>RestAssured</Skill>
         </li>
         <li>
           Tools/Other:
           <Skill>Linux</Skill>
+          /
           <Skill>Git</Skill>
         </li>
       </ul>
@@ -145,19 +155,12 @@ import {
         from="March 2025"
         to="August 2025"
       >
-        <p>The internship included training and hands-on practice in:</p>
-        <ul>
-          <li>Linux</li>
-          <li>Communication and Presentation Skills</li>
-          <li>SQL Server</li>
-          <li>Computer Networks and Operating Systems</li>
-          <li>C, C++, and Java</li>
-          <li>HTML and CSS</li>
-          <li>Web and API Testing</li>
-          <li>Test Case Design and Bug Report Writing</li>
-          <li>CV Writing and Interviewing Skills</li>
-          <li>Software Engineering</li>
-        </ul>
+        <p>
+          Built a solid foundation in software quality, testing workflows, and
+          technical communication. Developed the ability to analyze systems,
+          design clear test scenarios, and contribute effectively in team-based
+          product environments.
+        </p>
       </TimeRange>
 
       <TimeRange
@@ -166,23 +169,22 @@ import {
         to="November 2024"
       >
         <p>
-          Gained hands-on experience with backend development using Node.js and
-          Loopback. Explored server environments, cloud infrastructure basics,
-          and worked with enterprise tools such as IBM MQ and App Connect
-          Enterprise.
+          Gained practical exposure to backend development and system
+          integration, including working with server-side workflows, cloud
+          concepts, and enterprise application communication.
         </p>
       </TimeRange>
     </Section>
 
-    <Section title="Experience">
+    <Section title="Projects">
       <div class="space-y-8">
         <TimeRange title="Weather App" from="September 2025" hideTo>
           <p>
             Built an app that displays real-time weather info for selected
             cities (temperature, wind speed, humidity, and precipitation) with
-            customizable measurement units and hourly forecasts. Leverages Meteo
-            API for accurate data retrieval and uses TailwindCSS, React, and
-            Tanstack Query.
+            customizable measurement units and hourly forecasts. It uses
+            the Open-Meteo API for accurate data retrieval and is built with
+            Tailwind CSS, React, and TanStack Query.
           </p>
 
           <p>
@@ -199,8 +201,8 @@ import {
         >
           <p>
             Developed end-to-end tests for the Swag Labs demo site using
-            Selenium WebDriver. Covered workflows like login, sorting, cart
-            management, and checkout, and reusable test helpers using TestNG.
+            Selenium WebDriver and TestNG. Covered workflows like login,
+            sorting, cart management, and checkout.
           </p>
         </TimeRange>
 
@@ -212,26 +214,8 @@ import {
           <p>
             Created and executed API test scenarios for a PocketBase backend
             using Postman and RestAssured. Designed requests for CRUD
-            operations, authentication, and edge case handling. Focused on clean
-            structure and re-usable test logic.
-          </p>
-        </TimeRange>
-
-        <TimeRange
-          title="Code Critic — Bug Tracker App"
-          from="December 2024"
-          hideTo
-        >
-          <p>
-            Built a full-stack bug tracker with React, Remix, ShadcnUI, and
-            MongoDB. Implemented authentication and role-based access control.
-            Focused on clean UI and maintainability.
-          </p>
-
-          <p>
-            Demo: <a href="https://code-critic.vercel.app"
-              >https://code-critic.vercel.app</a
-            >
+            operations, authentication, and edge-case handling. Focused on clean
+            structure and reusable test logic.
           </p>
         </TimeRange>
       </div>
